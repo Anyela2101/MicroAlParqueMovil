@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+     </ion-buttons>
+
+    <ion-title>restaurante</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="ion-padding">
+    <ion-input (ionChange)="getNit($event)" position ="floating" placeholder="">NIT</ion-input>
+    <ion-input (ionChange)="getNombre($event)" position ="floating" placeholder="">Nombre</ion-input>
+    <ion-input (ionChange)="getNombrePropietario($event)" position ="floating" placeholder="">Nombre Propietario</ion-input>
+    <ion-input (ionChange)="getDireccion($event)" position ="floating" placeholder="">Direccion</ion-input>
+
+      <ion-input (ionChange)="getCantidadPersonal($event)" position ="floating" type="number" >Cantidad de personal</ion-input>
+  </ion-card>
+    
+  <ion-card class="ion-padding">
+    <ion-input (ionChange)="getTelefono($event)" position ="floating" placeholder="">Telefono</ion-input>
+    <ion-input (ionChange)="getEmail($event)" position ="floating" placeholder="">Email</ion-input>
+    <ion-input (ionChange)="getSedes($event)" position ="floating" type="number">Sedes</ion-input>
+    <ion-input (ionChange)="getAFuncionamiento($event)" position ="floating" type="number">Años de Funcionamiento</ion-input>
+    <ion-input (ionChange)="getEspecialidad($event)" position ="floating" placeholder="">Especialidad</ion-input>
+  </ion-card>
+
+    <ion-button (click)="Guardar()" expand="block" color="success">
+      <ion-icon name="checkmark-circle" slot="icon-only" ></ion-icon>
+    </ion-button>
+</ion-content>

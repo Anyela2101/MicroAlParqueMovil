@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>VerDatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-card class="ion-padding">
+    <ion-input (ionChange)="getnit($event)" position ="floating" placeholder="" [value] ="restaurante.nit">NIT</ion-input>
+    <ion-input (ionChange)="getnombre($event)" position ="floating" placeholder="" [value]="restaurante.nombres">Nombre Restaurante</ion-input>
+    <ion-input (ionChange)="getnombrepropietario($event)" position ="floating" placeholder="" [value] ="restaurante.nombrepropietario">Nombre Propietario</ion-input>
+    <ion-input (ionChange)="getdireccion($event)" position ="floating" placeholder="" [value]="restaurante.direccion" >Direccion</ion-input>
+     <ion-input (ionChange)="getcantidadpersonal($event)" position ="floating" type="number" [value]="restaurante.cantidadpersonal" >Cantidad Personal</ion-input>
+  </ion-card>
+
+  <ion-card class="ion-padding">
+    <ion-input (ionChange)="gettelefono($event)" position ="floating" placeholder="" [value]="restaurante.telefono">Telefono</ion-input>
+    <ion-input (ionChange)="getemail($event)" position ="floating" placeholder="" [value] ="restaurante.email">email</ion-input>
+    <ion-input (ionChange)="getsedes($event)" position ="floating" type="number" [value]="restaurante.sedes">sedes</ion-input>
+    <ion-input (ionChange)="getafuncionamiento($event)" position ="floating" type="number" [value]="restaurante.afuncionamiento">Año Funcionamiento</ion-input>
+    <ion-input (ionChange)="getespecialidad($event)" position ="floating" placeholder="" [value] ="restaurante.especialidad">Especialidad</ion-input>
+  </ion-card>
+
+  <ion-button (click)="Editar()" expand="block" color="success">
+    <ion-icon name="pencil-outline">Editar</ion-icon>
+  </ion-button>
+</ion-content>
